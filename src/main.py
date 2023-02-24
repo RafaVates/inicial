@@ -8,12 +8,13 @@ app = FastAPI()
 class Item(BaseModel):
     name: str
     price: float
+    foto: str
     is_offer: Optional[bool] = None
 
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Pasa": "Manos"}
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
